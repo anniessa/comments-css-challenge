@@ -1,170 +1,226 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-  
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <!-- Fonts from google -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-  
-  
+
+
   <title>CSS Challenge | Interactive comments section</title>
-  
+
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-    .attribution {font-family: Rubik, sans-serif;}
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
+
+    .attribution {
+      font-family: Rubik, sans-serif;
+    }
 
     body {
       background-color: hsl(228, 33%, 97%);
       font-family: Rubik, sans-serif;
     }
-    
+
     .container {
       display: grid inline;
-      grid-template-columns: repeat(auto-fill, 1fr);
-      grid-template-rows: repeat(auto-fill, 1fr);
+      grid-template-columns: repeat(auto, 1fr);
+      grid-template-rows: repeat(auto, 1fr);
+      padding: 200px;
+    }
+
+
+    .whole-comment {
+      grid-column: repeat(10, 1fr);
       padding: 50px;
-      margin: 50px;
-      justify-content: start;
-
+      margin: 60px;
+      border-radius: 8px;
+      background-color: white;
+      grid-gap: 15px;
+      align-items: center;
+      justify-content: center;
+      height: 200px;
     }
 
-    .row {
-    display: gird inline;
-
+    #amy {
+      
     }
-    
+
+
     .rating-btn {
-      
+      font-family: Rubik, sans-serif;
+      border-radius: 8px;
+      border: none;
+      height: 70px;
+      background-color:hsl(223, 19%, 93%);
+      color: hsl(238, 40%, 52%);
+      justify-content: center;
+      align-content: center;
     }
-    
+
     .username {
-      
+      font-family: Rubik, sans-serif;
+
     }
-    
+
     .prof-pic {
-      
+      grid-column: 2;
+
     }
-    
+
     .reply-btn {
-      
+      padding: 5px;
+      font-family: Rubik, sans-serif;
+      border: none;
+
     }
-    
+
     .post-date {
-      
-    }
-    
-    .you-tag{
-      
-    }
-    
-    .delete-btn{
-      
-    }
-    
-    .edit-btn{
-      
-    }
-
-    .send-btn{
+      grid-column: 4;
 
     }
 
-    .text-area{
-        width: 40%;
-        height: 100px;
-        padding: 10px;
-        background-color: white;
-        font-family: Rubik, sans-serif;
-
-
+    .you-tag {
 
     }
-    
+
+    .delete-btn {
+      font-family: Rubik, sans-serif;
+      border: none;
+    }
+
+    .edit-btn {
+      font-family: Rubik, sans-serif;
+      border: none;
+    }
+
+    .comment-reply-btn {
+      padding: 5px;
+      font-family: Rubik, sans-serif;
+      border-radius: 8px;
+      padding: 11px;
+      background-color: hsl(238, 40%, 52%);
+      color: white;
+      border: none;
+
+    }
+
+    .reply-btn {
+      border: none;
+
+    }
+
+    .text-area {
+      width: 40%;
+      height: 100px;
+      padding: 10px;
+      background-color: white;
+      font-family: Rubik, sans-serif;
+    }
+
+    .add-a-comment{
+
+    }
+
   </style>
 </head>
+
 <body>
-  
+
   <!-- Comment #1 -->
   <div class="container">
-    <div class="row">
-      <button class="rating-btn">12</button>
-      <img class="prof-pic" src="./images/avatars/image-amyrobson.png" alt="profile" />
-      <b class="username">amyrobson</b>
-      <p class="post-date">1 month ago</p>
+    <div id="amy" class="whole-comment">
+        <button class="rating-btn"><i class="fa fa-plus"></i>12<i class="fa fa-minus"></i></button>
+        <img class="prof-pic" src="./images/avatars/image-amyrobson.png" alt="profile" />
+        <b class="username">amyrobson</b>
+        <p class="post-date">1 month ago</p>
+      <p class="comment">
+        Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed
+        the design and the responsiveness at various breakpoints works really well.
+      </p>
+      <button class="reply-btn"><i class="fa fa-reply"></i>Reply</button>
     </div>
-    <p class="comment">
-      Impressive! Though it seems the drag feature could be improved. But overall it looks incredible. You've nailed the design and the responsiveness at various breakpoints works really well.
-    </p>
-    <input type="submit" name="reply-btn" value="Reply">
-    
-  </div>
-  <!-- Comment #2 -->
-  
-  <div class="container">
-    <div class="row">
-      <button class="rating-btn">5</button>
-      <img class="prof-pic" src="./images/avatars/image-maxblagun.png" alt="profile" />
-      <b class="username">maxblagun</b>
-      <p class="post-date">2 weeks ago</p>
+    <!-- Comment #2 -->
+
+    <div id="max" class="whole-comment">
+      <div class="row">
+        <button class="rating-btn"><i class="fa fa-plus"></i>5<i class="fa fa-minus"></i></button>
+        <img class="prof-pic" src="./images/avatars/image-maxblagun.png" alt="profile" />
+        <b class="username">maxblagun</b>
+        <p class="post-date">2 weeks ago</p>
+      </div>
+      <p class="comment">
+        Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive
+        into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
+      </p>
+      <button class="reply-btn"><i class="fa fa-reply"></i>Reply</button>
     </div>
-    <p class="comment">
-      Woah, your project looks awesome! How long have you been coding for? I'm still new, but think I want to dive into React as well soon. Perhaps you can give me an insight on where I can learn React? Thanks!
-    </p>
-    <input type="submit" name="reply-btn" value="Reply">
-  </div>
-  
-  <!-- Comment #3 (Reply to comment #2) -->
-  
-  <div class="container">
-    <div class="row">
-    <button class="rating-btn">4</button>
-    <img class="prof-pic" src="./images/avatars/image-ramsesmiron.png" alt="profile" />
-    <b class="username">ramsesmiron</b>
-    <p class="post-date">1 week ago</p>
-  </div>
-    <p class="comment">
-      @maxblagun If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before considering React. It's very tempting to jump ahead but lay a solid foundation first.
-    </p>
-    <input type="submit" name="reply-btn" value="Reply">
 
-  </div>
-  
-  <!-- Comment #4 (Reply to comment #2) -->
-  <div class="container">
-    <div class="row">
-    <button class="rating-btn">2</button>
-    <img class="prof-pic" src="./images/avatars/image-juliusomo.png" alt="profile" />
-    <b class="username">juliusomo </b>
-    <p class="you-tag">you</p>
-    <p class="post-date">2 days ago</p>
-  </div>
-    <p class="comment">
-      @ramsesmiron I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows the newest library/framework. But the fundamentals are what stay constant.
-    </p>
-    <button class="delete-btn"><i class="fa fa-trash-o"></i>Delete</button>
-    <button class="edit-btn"><i class="fa fa-pencil"></i>Edit</button>
+    <!-- Comment #3 (Reply to comment #2) -->
+
+    <div id="ramses" class="whole-comment">
+      <div class="row">
+        <button class="rating-btn"><i class="fa fa-plus"></i>4<i class="fa fa-minus"></i></button>
+        <img class="prof-pic" src="./images/avatars/image-ramsesmiron.png" alt="profile" />
+        <b class="username">ramsesmiron</b>
+        <p class="post-date">1 week ago</p>
+      </div>
+      <p class="comment">
+        @maxblagun If you're still new, I'd recommend focusing on the fundamentals of HTML, CSS, and JS before
+        considering React. It's very tempting to jump ahead but lay a solid foundation first.
+      </p>
+      <button class="reply-btn"><i class="fa fa-reply"></i>Reply</button>
+
+    </div>
+
+    <!-- Comment #4 (Reply to comment #2) -->
+    <div id="julius" class="whole-comment">
+      <div class="row">
+        <button class="rating-btn"><i class="fa fa-plus"></i>2<i class="fa fa-minus"></i></button>
+        <img class="prof-pic" src="./images/avatars/image-juliusomo.png" alt="profile" />
+        <b class="username">juliusomo </b>
+        <p class="you-tag">you</p>
+        <p class="post-date">2 days ago</p>
+      </div>
+      <p class="comment">
+        @ramsesmiron I couldn't agree more with this. Everything moves so fast and it always seems like everyone knows
+        the newest library/framework. But the fundamentals are what stay constant.
+      </p>
+      <button class="delete-btn"><i class="fa fa-trash-o"></i>Delete</button>
+      <button class="edit-btn"><i class="fa fa-pencil"></i>Edit</button>
+    </div>
+
+    <div class="add-a-comment">
+      <img class="prof-pic" src="./images/avatars/image-juliusomo.png" alt="profile" />
+      <textarea class="text-area">Add a comment...</textarea>
+      <button class="comment-reply-btn"></i>Reply</button>
+
+    </div>
   </div>
 
-  <div class="container">
-    <img class="prof-pic" src="./images/avatars/image-juliusomo.png" alt="profile" />
-    <textarea class="text-area">Add a comment...</textarea>
-    <input type="submit" name="reply-btn" value="Send">
-  </div>
 
-  
-  
+
   <div class="attribution">
-    Challenge adapted from <a href="https://www.frontendmentor.io/challenges/interactive-comments-section-iG1RugEG9" target="_blank">Frontend Mentor</a>. 
+    Challenge adapted from <a href="https://www.frontendmentor.io/challenges/interactive-comments-section-iG1RugEG9"
+      target="_blank">Frontend Mentor</a>.
     Coded by <a href="#">Anniessa Antar</a>.
   </div>
 </body>
+
 </html>
